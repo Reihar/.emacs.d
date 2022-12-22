@@ -35,7 +35,8 @@
 ;;
 ;;; Code:
 
-
+(setq inferior-lisp-program "\"c:/Program Files/Steel Bank Common Lisp/1.4.14/sbcl.exe\"")
+
 ;; Unset file-name-handler-alist temporarily. Then restore it later...
 (defvar doom--file-name-handler-alist file-name-handler-alist)
 (setq file-name-handler-alist nil)
@@ -232,7 +233,7 @@ If you experience stuttering, increase this.")
                (add-hook 'prog-mode-hook 'flyspell-prog-mode))
   :config
   (setq ispell-program-name "hunspell" ; Requires Hunspell
-        ispell-default-dictionary "en_GB")
+        ispell-default-dictionary "en_US")
   :delight " ⓢ")
 ;; ────────────────────────────────── WEB-MODE ─────────────────────────────────
 (use-package emmet-mode
@@ -323,8 +324,8 @@ If you experience stuttering, increase this.")
 (global-font-lock-mode 1)               ; Use font-lock everywhere.
 (setq font-lock-maximum-decoration t)   ; We have CPU to spare; highlight all syntax categories.
 
-(setq default-input-method "bengali-probhat")
-(set-fontset-font "fontset-default" 'bengali (font-spec :family "Kalpurush" :size 16))
+;(setq default-input-method "bengali-probhat")
+;(set-fontset-font "fontset-default" 'bengali (font-spec :family "Kalpurush" :size 16))
 
 (defun remove-quail-show-guidance ()
   "Function for removing guidance."
@@ -481,10 +482,10 @@ If you experience stuttering, increase this.")
 ;;________________________________________________________________
 ;;		Identity Who I Am ?
 ;;________________________________________________________________
-(setq user-full-name       "Likhon Barai"
-      user-login-name      "likhon"
-      user-real-login-name "raxit"
-      user-mail-address    "likhonhere007@gmail.com")
+(setq user-full-name       "Reihar"
+      user-login-name      "reihar"
+      user-real-login-name "reihar"
+      user-mail-address    "reihar@necronomicon.fr")
 ;;________________________________________________________________
 ;;		Highlight Current LINE
 ;;________________________________________________________________
@@ -494,8 +495,8 @@ If you experience stuttering, increase this.")
 ;; (set-face-underline-p 'highlight "#ff0000")
 
 ;; ────────────────────────── Transparency Alpha Value ─────────────────────────
-(set-frame-parameter (selected-frame) 'alpha '(85 . 50))
-(add-to-list 'default-frame-alist '(alpha . (85 . 50)))
+;(set-frame-parameter (selected-frame) 'alpha '(85 . 50))
+;(add-to-list 'default-frame-alist '(alpha . (85 . 50)))
 ;; (set-frame-parameter (selected-frame) 'alpha '(<active> . <inactive>))
 ;; (set-frame-parameter (selected-frame) 'alpha <both>)
 
